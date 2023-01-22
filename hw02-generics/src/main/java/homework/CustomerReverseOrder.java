@@ -4,7 +4,7 @@ import java.util.*;
 
 public class CustomerReverseOrder {
 
-    private final List<Customer> customers;
+    private final Deque<Customer> customers;
 
     public CustomerReverseOrder() {
         customers = new LinkedList<>();
@@ -15,6 +15,6 @@ public class CustomerReverseOrder {
     }
 
     public Customer take() {
-        return customers.remove(customers.size()-1);
+        return customers.removeLast();
     }
 }
