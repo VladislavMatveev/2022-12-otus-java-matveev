@@ -4,7 +4,7 @@ import java.util.*;
 
 public class CustomerReverseOrder {
 
-    List<Customer> customers;
+    private final List<Customer> customers;
 
     public CustomerReverseOrder() {
         customers = new LinkedList<>();
