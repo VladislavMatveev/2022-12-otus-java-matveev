@@ -8,4 +8,5 @@
 | 3072 | 7493 |  7  |
 | 4096 | 7412 |  7  |
 
-Optimal heap size: 2048 Mb
+Heap size:
+Optimal: 2048 + n*1024 Mb
