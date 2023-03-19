@@ -6,7 +6,7 @@ public record Banknote(Nominal nominal) {
     @Override
     public String toString() {
         return "Banknote{" +
-                nominal.get() +
+                nominal.getValue() +
                 '}';
     }
 }
