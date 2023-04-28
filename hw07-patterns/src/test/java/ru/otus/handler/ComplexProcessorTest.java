@@ -97,7 +97,7 @@ class ComplexProcessorTest {
     void throwExceptionTest() {
         //given
         var message = new Message.Builder(1L).field8("field8").build();
-        var processor = new ExceptionThrowProcessor(LocalDateTime.of(0,1,1,0,0,2));
+        var processor = new ExceptionThrowProcessor(() -> LocalDateTime.of(0,1,1,0,0,2));
 
         //when
         assertThatExceptionOfType(RuntimeException.class).isThrownBy(() -> processor.process(message));

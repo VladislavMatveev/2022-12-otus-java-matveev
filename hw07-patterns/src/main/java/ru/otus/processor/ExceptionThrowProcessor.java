@@ -1,21 +1,20 @@
 package ru.otus.processor;
 
 import ru.otus.model.Message;
-
-import java.time.LocalDateTime;
+import ru.otus.provider.DateTimeProvider;
 
 public class ExceptionThrowProcessor implements Processor {
 
-    private final LocalDateTime localDateTime;
+    private final DateTimeProvider localDateTime;
 
-    public ExceptionThrowProcessor(LocalDateTime localDateTime) {
+    public ExceptionThrowProcessor(DateTimeProvider localDateTime) {
         this.localDateTime = localDateTime;
     }
 
     @Override
     public Message process(Message message) {
 
-        if(localDateTime.getSecond()%2 == 0) {
+        if(localDateTime.getDate().getSecond()%2 == 0) {
             throw new RuntimeException();
         }
 
