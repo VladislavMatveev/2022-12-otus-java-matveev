@@ -6,4 +6,4 @@ include 'hw04-gc'
 include 'hw05-logging'
 include 'hw06-oop-atm'
 include 'hw07-patterns'
-
+include 'hw08-serialization'
